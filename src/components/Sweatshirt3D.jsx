@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, Suspense } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { useGLTF, Center } from '@react-three/drei'
 
@@ -10,8 +10,7 @@ export default function Sweatshirt3D({ scrollProgress, mouse }) {
   useEffect(() => {
     scene.traverse((child) => {
       if (child.isMesh) {
-        child.receiveShadow = true
-        child.castShadow = true
+        child.frustumCulled = true
       }
     })
   }, [scene])

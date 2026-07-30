@@ -16,7 +16,7 @@ export default function StickySection() {
 
   return (
     <section ref={containerRef} className="relative h-[400vh] border-t border-b border-concrete bg-concrete-white">
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden will-change-transform">
         <div className="absolute inset-0">
           <Scene scrollProgress={progress} mouse={mouse} />
         </div>

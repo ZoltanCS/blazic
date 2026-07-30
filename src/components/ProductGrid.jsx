@@ -1,3 +1,5 @@
+import { memo } from 'react'
+
 const products = [
   {
     id: '01',
@@ -5,7 +7,7 @@ const products = [
     price: '34.900',
     color: 'Kőszürke',
     desc: 'Neh&eacute;z s&uacute;ly&uacute; pamut, kőmosott, oversized.',
-    img: 'https://picsum.photos/seed/beton-hoodie/600/800',
+    img: 'https://picsum.photos/seed/beton-hoodie/400/533',
   },
   {
     id: '02',
@@ -13,7 +15,7 @@ const products = [
     price: '13.900',
     color: 'Fekete',
     desc: 'Vastag pamut, bő szab&aacute;s, erős varr&aacute;sok.',
-    img: 'https://picsum.photos/seed/varosi-polo/600/800',
+    img: 'https://picsum.photos/seed/varosi-polo/400/533',
   },
   {
     id: '03',
@@ -21,7 +23,7 @@ const products = [
     price: '27.900',
     color: 'Drap',
     desc: 'Hat zsebes, erős v&aacute;szon, &aacute;ll&iacute;that&oacute; der&eacute;k.',
-    img: 'https://picsum.photos/seed/kargo-nadrag/600/800',
+    img: 'https://picsum.photos/seed/kargo-nadrag/400/533',
   },
   {
     id: '04',
@@ -29,7 +31,7 @@ const products = [
     price: '24.900',
     color: 'Term&eacute;szetfeh&eacute;r',
     desc: 'F&eacute;lcipz&aacute;ras, magas gall&eacute;r, puha b&eacute;l&eacute;s.',
-    img: 'https://picsum.photos/seed/nyers-pulcsi/600/800',
+    img: 'https://picsum.photos/seed/nyers-pulcsi/400/533',
   },
   {
     id: '05',
@@ -37,7 +39,7 @@ const products = [
     price: '29.900',
     color: 'Antracit',
     desc: 'Laza szab&aacute;s, fleece b&eacute;l&eacute;s, k&eacute;nyelmes.',
-    img: 'https://picsum.photos/seed/nagyvarosi-kapucnis/600/800',
+    img: 'https://picsum.photos/seed/nagyvarosi-kapucnis/400/533',
   },
   {
     id: '06',
@@ -45,9 +47,56 @@ const products = [
     price: '8.900',
     color: 'Sz&uuml;rke',
     desc: 'Bord&aacute;zott k&ouml;t&eacute;s, stretch, egym&eacute;retes.',
-    img: 'https://picsum.photos/seed/beton-sapi/600/800',
+    img: 'https://picsum.photos/seed/beton-sapi/400/533',
   },
 ]
+
+const ProductCard = memo(function ProductCard({ product }) {
+  return (
+    <div className="bg-concrete-white p-6 md:p-8 flex flex-col group cursor-pointer">
+      <div className="aspect-[3/4] bg-concrete mb-5 overflow-hidden">
+        <img
+          src={product.img}
+          alt={product.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div className="flex-1">
+        <div className="flex justify-between items-start gap-4">
+          <div>
+            <p className="text-xs tracking-[0.15em] text-concrete-dark">
+              {product.id}
+            </p>
+            <h3 className="text-sm md:text-base font-bold tracking-[0.1em] text-concrete-darkest mt-1 group-hover:underline underline-offset-4">
+              {product.name}
+            </h3>
+          </div>
+          <p className="text-sm font-bold text-concrete-darkest whitespace-nowrap">
+            {product.price} Ft
+          </p>
+        </div>
+        <p className="text-[0.6rem] tracking-[0.2em] uppercase text-concrete-dark mt-2 font-light">
+          {product.color}
+        </p>
+        <p className="text-[0.6rem] tracking-[0.15em] text-concrete-dark mt-1 leading-relaxed font-light"
+          dangerouslySetInnerHTML={{ __html: product.desc }}
+        />
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-concrete flex justify-between items-center">
+        <span className="text-[0.55rem] tracking-[0.25em] uppercase text-concrete-dark font-light">
+          Kos&aacute;rba
+        </span>
+        <span className="text-concrete-dark font-mono text-xs opacity-40">
+          &rarr;
+        </span>
+      </div>
+    </div>
+  )
+})
 
 export default function ProductGrid() {
   return (
@@ -70,50 +119,7 @@ export default function ProductGrid() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-concrete">
           {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-concrete-white p-6 md:p-8 flex flex-col group cursor-pointer"
-            >
-              <div className="aspect-[3/4] bg-concrete mb-5 overflow-hidden">
-                <img
-                  src={product.img}
-                  alt={product.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  loading="lazy"
-                />
-              </div>
-
-              <div className="flex-1">
-                <div className="flex justify-between items-start gap-4">
-                  <div>
-                    <p className="text-xs tracking-[0.15em] text-concrete-dark">
-                      {product.id}
-                    </p>
-                    <h3 className="text-sm md:text-base font-bold tracking-[0.1em] text-concrete-darkest mt-1 group-hover:underline underline-offset-4">
-                      {product.name}
-                    </h3>
-                  </div>
-                  <p className="text-sm font-bold text-concrete-darkest whitespace-nowrap">
-                    {product.price} Ft
-                  </p>
-                </div>
-                <p className="text-[0.6rem] tracking-[0.2em] uppercase text-concrete-dark mt-2 font-light">
-                  {product.color}
-                </p>
-                <p className="text-[0.6rem] tracking-[0.15em] text-concrete-dark mt-1 leading-relaxed font-light"
-                  dangerouslySetInnerHTML={{ __html: product.desc }}
-                />
-              </div>
-
-              <div className="mt-4 pt-4 border-t border-concrete flex justify-between items-center">
-                <span className="text-[0.55rem] tracking-[0.25em] uppercase text-concrete-dark font-light">
-                  Kos&aacute;rba
-                </span>
-                <span className="text-concrete-dark font-mono text-xs opacity-40">
-                  &rarr;
-                </span>
-              </div>
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

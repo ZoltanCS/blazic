@@ -3,28 +3,28 @@ const looks = [
     id: 'L1',
     title: 'V&Aacute;ROSI MONOLIT',
     subtitle: 'Kő a kőn. R&eacute;teg a r&eacute;tegen.',
-    img: 'https://picsum.photos/seed/lookbook-1/1200/800',
+    img: 'https://picsum.photos/seed/lookbook-1/600/400',
     align: 'left',
   },
   {
     id: 'L2',
     title: 'BRUT&Aacute;LIS R&Eacute;TEGEK',
     subtitle: 'T&eacute;rfogat. Text&uacute;ra. S&uacute;ly.',
-    img: 'https://picsum.photos/seed/lookbook-2/1200/800',
+    img: 'https://picsum.photos/seed/lookbook-2/600/400',
     align: 'right',
   },
   {
     id: 'L3',
     title: 'UTCAI SZOBOR',
     subtitle: 'A test &eacute;p&iacute;t&eacute;szete.',
-    img: 'https://picsum.photos/seed/lookbook-3/1200/800',
+    img: 'https://picsum.photos/seed/lookbook-3/600/400',
     align: 'left',
   },
   {
     id: 'L4',
     title: 'NYERS &Eacute;LEK',
     subtitle: 'Befejezetlen. Csiszolatlan. Hiteles.',
-    img: 'https://picsum.photos/seed/lookbook-4/1200/800',
+    img: 'https://picsum.photos/seed/lookbook-4/600/400',
     align: 'right',
   },
 ]
@@ -54,21 +54,15 @@ export default function Lookbook() {
               key={look.id}
               className={`relative flex ${look.align === 'right' ? 'justify-end' : 'justify-start'}`}
             >
-              <div
-                className={`
-                  w-full md:w-[80%] lg:w-[65%]
-                  border border-concrete
-                  ${look.align === 'right' ? 'text-right' : 'text-left'}
-                  relative overflow-hidden
-                `}
-              >
+              <div className={`w-full md:w-[80%] lg:w-[65%] border border-concrete ${look.align === 'right' ? 'text-right' : 'text-left'} relative overflow-hidden`}>
                 <img
                   src={look.img}
                   alt={look.title}
-                  className="w-full h-full absolute inset-0 object-cover grayscale opacity-30"
+                  className="w-full h-full absolute inset-0 object-cover opacity-30"
                   loading="lazy"
+                  decoding="async"
                 />
-                <div className="relative z-10 p-8 md:p-12 lg:p-16 backdrop-blur-[1px]">
+                <div className="relative z-10 p-8 md:p-12 lg:p-16">
                   <p className="text-[0.55rem] tracking-[0.35em] uppercase text-concrete-dark mb-4">
                     {look.id}
                   </p>

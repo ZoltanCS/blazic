@@ -23,29 +23,18 @@ export default function TextOverlay({ progress, labels }) {
         return (
           <div
             key={i}
-            className="absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ease-out"
+            className="absolute inset-0 flex flex-col items-center justify-center"
             style={{
               opacity: fade,
               transform: `translateY(${yOffset}px)`,
+              transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
               pointerEvents: 'none',
             }}
           >
-            <h2
-              className="text-xxl font-black tracking-[-0.03em] leading-none"
-              style={{
-                color: '#ffffff',
-                mixBlendMode: 'difference',
-              }}
-            >
+            <h2 className="text-xxl font-black tracking-[-0.03em] leading-none text-concrete-darkest">
               {label.text}
             </h2>
-            <p
-              className="mt-3 text-xs tracking-[0.25em] uppercase font-light"
-              style={{
-                color: '#ffffff',
-                mixBlendMode: 'difference',
-              }}
-            >
+            <p className="mt-3 text-xs tracking-[0.25em] uppercase text-concrete-dark font-light">
               {label.sub}
             </p>
           </div>
