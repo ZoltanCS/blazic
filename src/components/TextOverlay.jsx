@@ -29,12 +29,14 @@ export default function TextOverlay({ progress, labels }) {
               transform: `translateY(${yOffset}px)`,
               transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
               pointerEvents: 'none',
+              color: '#ffffff',
+              mixBlendMode: 'difference',
             }}
           >
-            <h2 className="text-xxl font-black tracking-[-0.03em] leading-none text-concrete-darkest">
+            <h2 className="text-xxl font-black tracking-[-0.03em] leading-none">
               {label.text}
             </h2>
-            <p className="mt-3 text-xs tracking-[0.25em] uppercase text-concrete-dark font-light">
+            <p className="mt-3 text-xs tracking-[0.25em] uppercase font-light">
               {label.sub}
             </p>
           </div>
