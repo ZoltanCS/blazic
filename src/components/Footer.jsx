@@ -8,20 +8,19 @@ export default function Footer() {
               BLAZIC
             </h4>
             <p className="text-[0.6rem] tracking-[0.15em] leading-relaxed text-concrete-dark font-light max-w-xs">
-              Neh&eacute;z ruh&aacute;k neh&eacute;z időkre.<br />
-              Betonban szabva. Az utc&aacute;n hordva.
+              Nehéz ruhák, nehéz időkre. Betonban szabva, az utcán bizonyítva.
             </p>
           </div>
 
           <div>
             <h5 className="text-[0.55rem] tracking-[0.35em] uppercase text-concrete-dark mb-4">
-              Men&uuml;
+              Menü
             </h5>
             <ul className="space-y-2">
-              {['Shop', 'Lookbook', 'R&oacute;lunk', 'Boltok', 'Kapcsolat'].map((item) => (
+              {['Shop', 'Lookbook', 'Rólunk', 'Boltok', 'Kapcsolat'].map((item) => (
                 <li key={item}>
                   <button className="text-xs tracking-[0.15em] text-concrete-darkest hover:underline underline-offset-4 font-light">
-                    <span dangerouslySetInnerHTML={{ __html: item }} />
+                    {item}
                   </button>
                 </li>
               ))}
@@ -49,9 +48,9 @@ export default function Footer() {
             &copy; 2024 BLAZIC. Minden jog fenntartva.
           </p>
           <div className="flex gap-8">
-            {['Adatv&eacute;delem', 'Felhaszn&aacute;l&aacute;si felt&eacute;telek', 'Sz&aacute;ll&iacute;t&aacute;s'].map((item) => (
+            {['Adatvédelem', 'Felhasználási feltételek', 'Szállítás'].map((item) => (
               <button key={item} className="text-[0.5rem] tracking-[0.2em] uppercase text-concrete-dark hover:underline underline-offset-4 font-light">
-                <span dangerouslySetInnerHTML={{ __html: item }} />
+                {item}
               </button>
             ))}
           </div>

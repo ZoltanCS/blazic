@@ -6,47 +6,47 @@ const products = [
     name: 'BETON HOODIE',
     price: '34.900',
     color: 'Kőszürke',
-    desc: 'Neh&eacute;z s&uacute;ly&uacute; pamut, kőmosott, oversized.',
+    desc: 'Nehéz súlyú pamut, kőmosott, oversized.',
     img: 'https://picsum.photos/seed/beton-hoodie/400/533',
   },
   {
     id: '02',
-    name: 'V&Aacute;ROSI P&Oacute;L&Oacute;',
+    name: 'VÁROSI PÓLÓ',
     price: '13.900',
     color: 'Fekete',
-    desc: 'Vastag pamut, bő szab&aacute;s, erős varr&aacute;sok.',
+    desc: 'Vastag pamut, bő szabás, erős varrások.',
     img: 'https://picsum.photos/seed/varosi-polo/400/533',
   },
   {
     id: '03',
-    name: 'KARGO NADR&Aacute;G',
+    name: 'KARGO NADRÁG',
     price: '27.900',
     color: 'Drap',
-    desc: 'Hat zsebes, erős v&aacute;szon, &aacute;ll&iacute;that&oacute; der&eacute;k.',
+    desc: 'Hat zsebes, erős vászon, állítható derék.',
     img: 'https://picsum.photos/seed/kargo-nadrag/400/533',
   },
   {
     id: '04',
     name: 'NYERS PULCSI',
     price: '24.900',
-    color: 'Term&eacute;szetfeh&eacute;r',
-    desc: 'F&eacute;lcipz&aacute;ras, magas gall&eacute;r, puha b&eacute;l&eacute;s.',
+    color: 'Természetfehér',
+    desc: 'Félcipzáras, magas gallér, puha bélés.',
     img: 'https://picsum.photos/seed/nyers-pulcsi/400/533',
   },
   {
     id: '05',
-    name: 'NAGYV&Aacute;ROSI KAPUCNIS',
+    name: 'NAGYVÁROSI KAPUCNIS',
     price: '29.900',
     color: 'Antracit',
-    desc: 'Laza szab&aacute;s, fleece b&eacute;l&eacute;s, k&eacute;nyelmes.',
+    desc: 'Laza szabás, fleece bélés, kényelmes.',
     img: 'https://picsum.photos/seed/nagyvarosi-kapucnis/400/533',
   },
   {
     id: '06',
     name: 'BETON SAPI',
     price: '8.900',
-    color: 'Sz&uuml;rke',
-    desc: 'Bord&aacute;zott k&ouml;t&eacute;s, stretch, egym&eacute;retes.',
+    color: 'Szürke',
+    desc: 'Bordázott kötés, stretch, egyméretes.',
     img: 'https://picsum.photos/seed/beton-sapi/400/533',
   },
 ]
@@ -81,14 +81,14 @@ const ProductCard = memo(function ProductCard({ product }) {
         <p className="text-[0.6rem] tracking-[0.2em] uppercase text-concrete-dark mt-2 font-light">
           {product.color}
         </p>
-        <p className="text-[0.6rem] tracking-[0.15em] text-concrete-dark mt-1 leading-relaxed font-light"
-          dangerouslySetInnerHTML={{ __html: product.desc }}
-        />
+        <p className="text-[0.6rem] tracking-[0.15em] text-concrete-dark mt-1 leading-relaxed font-light">
+          {product.desc}
+        </p>
       </div>
 
       <div className="mt-4 pt-4 border-t border-concrete flex justify-between items-center">
         <span className="text-[0.55rem] tracking-[0.25em] uppercase text-concrete-dark font-light">
-          Kos&aacute;rba
+          Kosárba
         </span>
         <span className="text-concrete-dark font-mono text-xs opacity-40">
           &rarr;
@@ -112,7 +112,7 @@ export default function ProductGrid() {
           <div className="flex items-center gap-4 mt-4">
             <div className="w-16 h-px bg-concrete-mid" />
             <p className="text-xs tracking-[0.2em] uppercase text-concrete-dark font-light">
-              El&eacute;rhető most
+              Elérhető most
             </p>
           </div>
         </div>
