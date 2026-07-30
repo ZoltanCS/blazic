@@ -8,7 +8,7 @@ export default function Footer() {
               BLAZIC
             </h4>
             <p className="text-[0.6rem] tracking-[0.15em] leading-relaxed text-concrete-dark font-light max-w-xs">
-              Nehéz ruhák, nehéz időkre. Betonban szabva, az utcán bizonyítva.
+              Súlyos darabok, kőkemény napokra. Betonon formálva, utcán bizonyítva.
             </p>
           </div>
 

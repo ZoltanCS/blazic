@@ -4,9 +4,9 @@ import Scene from './Scene'
 import TextOverlay from './TextOverlay'
 
 const labels = [
-  { at: 0, text: 'A HOODIE', sub: 'Ikonikus szabás — újragondolva.' },
-  { at: 0.25, text: 'BETON', sub: 'Nehézsúlyú pamut, kőmosott felülettel.' },
-  { at: 0.5, text: 'DROP II', sub: 'FW25 kollekció — most elérhető' },
+  { at: 0, text: 'A HOODIE', sub: 'A klasszikus forma, nulláról felépítve.' },
+  { at: 0.25, text: 'BETON', sub: 'Vastag pamut, kőkeményre mosva.' },
+  { at: 0.5, text: 'DROP II.', sub: 'Ősz/tél \'25 – itt van.' },
   { at: 0.75, text: 'BLAZIC', sub: 'Az utcára tervezve.' },
 ]
 
@@ -25,7 +25,7 @@ export default function StickySection() {
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
           <div className="text-[0.55rem] tracking-[0.35em] uppercase text-concrete-dark font-light">
-            Görgess a 360°-os nézethez
+            FORGASD MEG
           </div>
           <div className="w-px h-8 bg-concrete-mid" />
         </div>

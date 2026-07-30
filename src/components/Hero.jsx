@@ -15,7 +15,7 @@ export default function Hero() {
     <section ref={ref} className="relative min-h-screen flex flex-col justify-between px-6 md:px-12 pt-12 pb-8 overflow-hidden border-b border-concrete">
       <div className="relative z-10">
         <p className="text-[0.55rem] tracking-[0.35em] uppercase text-concrete-dark font-light">
-          Alapítva 2024
+          EST. 2024
         </p>
       </div>
 
@@ -25,11 +25,11 @@ export default function Hero() {
         </h1>
         <div className="flex items-end gap-4 md:gap-12 mt-2">
           <p className="text-xs md:text-sm tracking-[0.25em] uppercase text-concrete-dark font-light">
-            Utcai viselet
+            STREETWEAR
           </p>
           <div className="flex-1 h-px bg-concrete" />
           <p className="text-xs md:text-sm tracking-[0.25em] uppercase text-concrete-dark font-light">
-            Nem magyarázkodunk
+            NINCS SZÜKSÉG SZAVAKRA
           </p>
         </div>
       </motion.div>
@@ -37,12 +37,12 @@ export default function Hero() {
       <motion.div style={{ opacity }} className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-4">
         <div className="max-w-xs">
           <p className="text-xs tracking-[0.15em] leading-relaxed text-concrete-dark font-light">
-            Nehéz anyagok, nehéz időkre. Az utcára szabva, ütésálló kivitelben.
+            Súlyos anyagok súlyos napokra. Az utcán született, semmit nem enged.
           </p>
         </div>
         <div className="text-right">
           <p className="text-[0.55rem] tracking-[0.3em] uppercase text-concrete-dark font-light">
-            Görgess lejjebb
+            TOVÁBB
           </p>
           <div className="flex justify-end mt-2">
             <div className="w-8 h-px bg-concrete-mid" />

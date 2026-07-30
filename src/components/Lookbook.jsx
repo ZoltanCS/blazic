@@ -1,29 +1,29 @@
 const looks = [
   {
     id: 'L1',
-    title: 'L1 — VÁROSI MONOLIT',
-    subtitle: 'Kő a kövön, réteg a rétegen.',
+    title: 'VÁROSI MONOLIT',
+    subtitle: 'Beton, réteg réteg hátán.',
     img: 'https://picsum.photos/seed/lookbook-1/600/400',
     align: 'left',
   },
   {
     id: 'L2',
     title: 'BRUTÁLIS RÉTEGEK',
-    subtitle: 'Térfogat, textúra, súly — mindhárom egyszerre.',
+    subtitle: 'Forma, anyag, súly – egyben.',
     img: 'https://picsum.photos/seed/lookbook-2/600/400',
     align: 'right',
   },
   {
     id: 'L3',
-    title: 'L3 — UTCAI SZOBOR',
-    subtitle: 'A test építészete.',
+    title: 'UTCAI SZOBOR',
+    subtitle: 'Testre húzott építészet.',
     img: 'https://picsum.photos/seed/lookbook-3/600/400',
     align: 'left',
   },
   {
     id: 'L4',
-    title: 'L4 — NYERS ÉLEK',
-    subtitle: 'Befejezetlen. Csiszolatlan. Hiteles.',
+    title: 'NYERS ÉLEK',
+    subtitle: 'Nyers. Csiszolatlan. Igazi.',
     img: 'https://picsum.photos/seed/lookbook-4/600/400',
     align: 'right',
   },
@@ -43,7 +43,7 @@ export default function Lookbook() {
           <div className="flex items-center gap-4 mt-4">
             <div className="w-16 h-px bg-concrete-mid" />
             <p className="text-xs tracking-[0.2em] uppercase text-concrete-dark font-light">
-              FW25 szerkesztőségi válogatás
+              Ősz/tél '25 válogatás
             </p>
           </div>
         </div>

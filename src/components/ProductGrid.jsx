@@ -107,12 +107,12 @@ export default function ProductGrid() {
             / 02
           </p>
           <h2 className="text-xxl font-black tracking-[-0.03em] leading-none text-concrete-darkest">
-            DROPP
+            DROP II.
           </h2>
           <div className="flex items-center gap-4 mt-4">
             <div className="w-16 h-px bg-concrete-mid" />
             <p className="text-xs tracking-[0.2em] uppercase text-concrete-dark font-light">
-              Elérhető most
+              Ősz/tél '25 – itt van.
             </p>
           </div>
         </div>
