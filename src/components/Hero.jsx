@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
           <div className="flex-1 h-px bg-concrete" />
           <p className="text-xs md:text-sm tracking-[0.25em] uppercase text-concrete-dark font-light">
-            NINCS SZÜKSÉG SZAVAKRA
+            BUDAPEST
           </p>
         </div>
       </motion.div>
@@ -37,7 +37,7 @@ export default function Hero() {
       <motion.div style={{ opacity }} className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-4">
         <div className="max-w-xs">
           <p className="text-xs tracking-[0.15em] leading-relaxed text-concrete-dark font-light">
-            Súlyos anyagok súlyos napokra. Az utcán született, semmit nem enged.
+            Nehéz szövetek. Tömör formák. A város kemény, mi is azok vagyunk.
           </p>
         </div>
         <div className="text-right">

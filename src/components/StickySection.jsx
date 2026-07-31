@@ -4,10 +4,10 @@ import Scene from './Scene'
 import TextOverlay from './TextOverlay'
 
 const labels = [
-  { at: 0, text: 'A HOODIE', sub: 'A klasszikus forma, nulláról felépítve.' },
-  { at: 0.25, text: 'BETON', sub: 'Vastag pamut, kőkeményre mosva.' },
-  { at: 0.5, text: 'DROP II.', sub: 'Ősz/tél \'25 – itt van.' },
-  { at: 0.75, text: 'BLAZIC', sub: 'Az utcára tervezve.' },
+  { at: 0, text: 'A HOODIE', sub: 'Klasszikus. Nulláról.' },
+  { at: 0.25, text: 'BETON', sub: '400gsm. Kőkemény.' },
+  { at: 0.5, text: 'DROP II.', sub: '2025 TÉL' },
+  { at: 0.75, text: 'BLAZIC', sub: 'Budapest.' },
 ]
 
 export default function StickySection() {

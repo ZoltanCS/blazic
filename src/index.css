@@ -28,12 +28,39 @@
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
   ::-webkit-scrollbar-track {
     background: #f7f5f0;
   }
   ::-webkit-scrollbar-thumb {
-    background: #d4d0cb;
+    background: #1c1a18;
+  }
+
+  a, button {
+    transition: all 0.2s ease-out;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:focus-visible {
+    outline: 2px solid #1c1a18;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .text-hero {
+    font-size: clamp(5rem, 20vw, 16rem);
+  }
+
+  .text-xxl {
+    font-size: clamp(2rem, 6vw, 5rem);
+  }
+
+  .text-xxxl {
+    font-size: clamp(6rem, 25vw, 20rem);
   }
 }
